@@ -31,3 +31,10 @@ value = 3.14
 value = "Hello"
 value = "World"
 print(value)
+
+x = 10
+# del = x # x에 대한 변수 삭제
+# print(x) 변수가 없어서 Error 뜸
+
+x = None
+print(x)
