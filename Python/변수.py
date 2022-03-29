@@ -1,5 +1,3 @@
-from re import X
-
 weight = 75.3
 weight = 80.6
 print(weight)
