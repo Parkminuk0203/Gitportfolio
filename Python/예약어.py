@@ -2,3 +2,4 @@
 import keyword 
 keyword.kwlist
 print(keyword.kwlist)
+#외우기
