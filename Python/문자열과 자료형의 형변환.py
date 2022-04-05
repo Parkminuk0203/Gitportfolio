@@ -1,20 +1,23 @@
-# 따옴표 출력
+#따옴표 출력
 s = "그가 '좋아' 라고 답했다." # '그가 '좋아'라고 답했다.' 라고 하면 Error.
 print(s) #그가 '좋아' 라고 답했다.
 
-# 백슬러시(\)
+#백슬러시(\)
 s = '그가 \'좋아\' 라고 답했다.'
 print(s) #그가 '좋아' 라고 답했다.
 
-# 이스케이프 문자
+#이스케이프 문자
 print("Hello \nWorld") 
-# Hello
-# World
-print("Hello \tWorld") # Hello   World
-print("Hello \\World") # Hello \World
-print("Hello \bWorld") # HelloWorld
+#Hello
+#World
+print("Hello \tWorld") 
+#Hello   World
+print("Hello \\World") 
+#Hello \World
+print("Hello \bWorld") 
+#HelloWorld
 print("Hello \vWorld")
-# Hello
+#Hello
 #      World
 print("\u0061") # a
 
@@ -64,8 +67,106 @@ s = 'Hello'
 
 # 슬라이싱
 s = 'Hello World'
-print(s[0:2]) # He
-print(s[0:5]) # Hello
-print(s[5:8]) #  Wo
-print(s[6:11]) # World
+print(s[0:2]) # He 0~1
+print(s[0:5]) # Hello 0~4
+print(s[5:8]) #  Wo 5~7
+print(s[6:11]) # World 7~10
 
+# 시작 번호, 끝번호도 생략 가능
+s = 'Hello World'
+print(s[:5]) # Hello 0~4
+print(s[6:]) # World 7~
+print(s[:]) # Hello World 
+
+s = '20210514Friday'
+
+year = s[:4] 
+month = s[4:6]
+day = s[6:8]
+week = s[8:]
+date = year + '년 ' + month + '월 ' + day + '일 ' + week
+print(date) # 2021년 05월 14일 Friday
+
+#문자열 함수
+#count
+s = 'Hello World'
+print(s.count('l')) 
+#3
+#l은 3개 있음
+print(s.count('w')) 
+#0
+#대소문자 구분함
+
+#find()
+s = 'Hello World'
+print(s.find('H'))
+#0
+print(s.find('o'))
+#4
+print(s.find('World'))
+#6
+print(s.find('p'))
+#-1
+#없으면 -1 반환한다.
+
+#index()
+print(s.index('H')) 
+#0
+print(s.index('Wo'))
+#6
+#print(s.index('P')) P가 없어서 오류남
+
+#strip()
+s = '   Hello   '
+print(s.strip())
+#Hello 양쪽 공백 제거
+print(s.lstrip())
+#Hello 왼쪽 공백 제거
+print(s.rstrip())
+#   Hello 오른쪽 공백 제거
+
+s = 'Hello World'
+print(s.upper())
+#HELLO WORLD 문자열의 알파벳을 모두 대문자로 변환
+print(s.lower())
+#hello world 문자열의 알파벳을 모두 소문자로 변환
+
+#join()
+s = 'Hello'
+print('/'.join(s))
+#H/e/l/l/o
+sep = ' - '
+print(sep.join('ABCDE'))
+#A - B - C - D - E
+
+#replace() 함수
+s = 'Hello World'
+print(s.replace('o', 'a')) #o를 a로 바꿔라
+#Hella Warld
+print(s.replace('World', 'Python')) #World를 Python로 바꿔라
+#Hello Python
+
+#split(공백 또는 구분자)
+s = 'Hello World'
+print(s.split()) # 공백으로 나누기
+#['Hello', 'World']
+s = 'www.nrf.re.kr'
+print(s.split('.')) # 구분자(여기서는 '.')로 나누기
+#['www', 'nrf', 're', 'kr']
+
+#format()
+s = 'Hello {}'
+print(s.format('World'))
+#Hello World
+print(s.format('Python'))
+#Hello Python
+
+s = 'Hello {0} {1}'
+print(s.format('Wolrd', 'Python'))
+#Hello Wolrd Python
+s = 'Hello {1} {0}'
+print(s.format('World', 'Python'))
+#Hello Python World
+s = 'Hello {s1} {s2}'
+print(s.format(s2= 'World', s1= 'Python'))
+#Hello Python World
