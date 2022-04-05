@@ -21,7 +21,7 @@ print("Hello \vWorld")
 #      World
 print("\u0061") # a
 
-# 문자열 포맷팅
+#문자열 포맷팅
 name = "홍길동"
 print("제 이름은 %s 입니다." %name) # 제 이름은 홍길동 입니다.
 
@@ -170,3 +170,61 @@ print(s.format('World', 'Python'))
 s = 'Hello {s1} {s2}'
 print(s.format(s2= 'World', s1= 'Python'))
 #Hello Python World
+
+#len() 문자열의 길이를 반환
+s = 'Hello'
+print(len(s))
+#5
+col = [1,2,3,4]
+print(len(col))
+#4
+
+#chr(), ord()
+print(chr(97)) #10진수 유니코드 값
+#a
+print(chr(0x3131)) #16진수 유니코드 값
+#ㄱ
+print(ord('A')) #a의 유니코드 값
+#65
+print(ord('ㄱ')) #ㄱ의 유니코드 값
+#12593
+
+#hex(), oct()
+print(hex(12593)) #입력받은 정수를 16진수로 변환
+#0x3131
+print(hex(97)) #입력받은 정수를 16진수로 변환
+#0x61
+print(oct(9)) #입력받은 정수를 8진수로 변환
+#0o11
+print(oct(16)) #입력받은 정수를 8진수로 변환
+#0o20
+
+#print(10+'10') Error. 자료형이 다르면 연산이 되지 않는다.
+print(10+int('10')) # '10'을 정수로 바꿔주는 함수 사용
+#20
+print(str(10)+'10') # 10을 문자열로 바꿔주는 함수 사용
+#1010
+
+#int()
+print(int(3.14159))
+#3
+print(int(7 / 3))
+#2
+print(int('2000'))
+#2000
+# print(int('a')) Error
+
+#float()
+print(float(3))
+#3.0
+print(float(6/3))
+#2.0
+print(float('2000'))
+#2000.0
+print(float('3.14159'))
+#3.14159
+
+#str
+score = 100
+print(str(score) + "점 입니다.")
+#100점 입니다.
