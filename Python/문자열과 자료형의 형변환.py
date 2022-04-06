@@ -18,12 +18,14 @@ print("Hello \bWorld")
 #HelloWorld
 print("Hello \vWorld")
 #Hello
-#      World
+#     World
+
 print("\u0061") # a
 
 #문자열 포맷팅
 name = "홍길동"
-print("제 이름은 %s 입니다." %name) # 제 이름은 홍길동 입니다.
+print("제 이름은 %s 입니다." %name) 
+#제 이름은 홍길동 입니다.
 
 age = 22
 print("나이는 %d살 입니다." %age) # 나이는 22살 입니다.
@@ -34,12 +36,15 @@ print("키는 %.1fcm 입니다." %height) # 키는 176.5cm 입니다.
 
 msg = "현재 시간은 %s 입니다."
 time = "12:00pm"
-print(msg %time) # 현재 시간은 12:00pm 입니다.
+print(msg %time) 
+#현재 시간은 12:00pm 입니다.
 
-print("전공은 %s이고 현재 %d학년입니다." %("컴퓨터", 1)) # 전공은 컴퓨터이고 현재 1학년입니다.
+print("전공은 %s이고 현재 %d학년입니다." %("컴퓨터", 1)) 
+#전공은 컴퓨터이고 현재 1학년입니다.
 
 msg = "오늘은 %s월 %s일입니다."
-print(msg % (5, 15)) # 오늘은 5월 15일입니다.
+print(msg %(5, 15)) 
+#오늘은 5월 15일입니다.
 
 print('컴퓨터' + '공학과') # 컴퓨터공학과
 first = "컴퓨터"
@@ -51,16 +56,19 @@ print(star * 50) # **************************************************
 
 s1 = '컴퓨터'
 s2 = '공학과'
-s3 = (s1 + s2 + '!! ') * 3
+s3 = (s1 + s2 + '!! ') * 3 #(컴퓨터공학과!! )
 print(s3) # 컴퓨터공학과!! 컴퓨터공학과!! 컴퓨터공학과!!
 
 # 인덱싱
 # 인덱스 번호는 0번부터 시작
 # 파이썬만 음수 인덱스 가능함
-s = 'Hello' # 양수인덱스 0,1,2,3,4 음수인덱스 -5,-4,-3,-2,-1
-print(s[0]) # H
-print(s[4]) # o
-print(s[-1]) # o
+s = 'Hello' #양수인덱스 0,1,2,3,4 음수인덱스 -5,-4,-3,-2,-1
+print(s[0]) 
+#H
+print(s[4]) 
+#o
+print(s[-1])
+#o
 
 s = 'Hello'
 # s[0] = 'K' 인덱스 문자는 변경 할 수 없다. Error.
@@ -70,7 +78,7 @@ s = 'Hello World'
 print(s[0:2]) # He 0~1
 print(s[0:5]) # Hello 0~4
 print(s[5:8]) #  Wo 5~7
-print(s[6:11]) # World 7~10
+print(s[6:11]) # World 6~10
 
 # 시작 번호, 끝번호도 생략 가능
 s = 'Hello World'
@@ -85,7 +93,8 @@ month = s[4:6]
 day = s[6:8]
 week = s[8:]
 date = year + '년 ' + month + '월 ' + day + '일 ' + week
-print(date) # 2021년 05월 14일 Friday
+print(date) 
+#2021년 05월 14일 Friday
 
 #문자열 함수
 #count
@@ -109,6 +118,7 @@ print(s.find('p'))
 #-1
 #없으면 -1 반환한다.
 
+s = 'Hello World'
 #index()
 print(s.index('H')) 
 #0
@@ -119,7 +129,8 @@ print(s.index('Wo'))
 #strip()
 s = '   Hello   '
 print(s.strip())
-#Hello 양쪽 공백 제거
+#양쪽 공백 제거
+#Hello
 print(s.lstrip())
 #Hello 왼쪽 공백 제거
 print(s.rstrip())
@@ -176,7 +187,7 @@ s = 'Hello'
 print(len(s))
 #5
 col = [1,2,3,4]
-print(len(col))
+print(len(col)) #자료형의 갯수만 나옴
 #4
 
 #chr(), ord()
@@ -192,7 +203,7 @@ print(ord('ㄱ')) #ㄱ의 유니코드 값
 #hex(), oct()
 print(hex(12593)) #입력받은 정수를 16진수로 변환
 #0x3131
-print(hex(97)) #입력받은 정수를 16진수로 변환
+print(hex(97)) #입력받은  16진수정수를로 변환
 #0x61
 print(oct(9)) #입력받은 정수를 8진수로 변환
 #0o11
@@ -200,9 +211,9 @@ print(oct(16)) #입력받은 정수를 8진수로 변환
 #0o20
 
 #print(10+'10') Error. 자료형이 다르면 연산이 되지 않는다.
-print(10+int('10')) # '10'을 정수로 바꿔주는 함수 사용
+print(10+int('10')) #'10'을 정수로 바꿔주는 함수 사용
 #20
-print(str(10)+'10') # 10을 문자열로 바꿔주는 함수 사용
+print(str(10)+'10') #10을 문자열로 바꿔주는 함수 사용
 #1010
 
 #int()
