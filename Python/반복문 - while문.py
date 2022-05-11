@@ -389,4 +389,3 @@ while win != True :
             win = True
         else :
             print("졌다.")
-'''
