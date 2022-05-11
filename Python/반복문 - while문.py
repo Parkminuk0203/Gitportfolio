@@ -1,3 +1,4 @@
+'''
 # 반복적(looping) 실행 - 반복문
 # 특정 부분을 일정한 횟수만큼 반복 실행하는 반복 제어 구조
 
@@ -298,3 +299,95 @@ import random
 num = random.randint(1,10)
 print(num)
 
+import random
+num = random.randint(1,6)
+while num != 3 :
+    num = random.randint(1,6)
+    print("주사위를 굴렸다. ",num,"나옴")
+print("드디어 3 나와서 종료합니다.")
+
+# 구구단 게임입니다.
+# 7 * 9 = 63
+# 맞습니다.
+# 2 * 8 = 15
+# 틀렸습니다.
+# 2 * 9 = 18
+# 맞습니다.
+
+# 총 3문제 중 2 문제 맞추셨습니다.
+# 랜덤하게 구구단 문제 3개를 출력. 끝나면 몇 문제 맞는지 출력
+
+import random
+print("구구단 게임입니다.")
+i = 0
+score = 0
+
+while i < 3 :
+    num1 = random.randint(1, 9)
+    num2 = random.randint(1, 9)
+    result = num1 * num2
+
+    print(num1, "*", num2, "= ", end="")
+    ans = int(input())
+
+    if ans == result :
+        print("맞습니다.")
+        score += 1
+    else :
+        print("틀렸습니다.")
+        i += 1
+print("\n총 3문제 중", score,"문제 맞추셨습니다. ")
+
+# 가위, 바위, 보 게임을 만들어 봅시다. 랜덤 함수를 이용해서 컴퓨터의 선택을 결정하고, 사용자가 이길 때 까지 반복 합니다.
+# 이길 때 까지 계속 합니다.
+# 가위, 바위, 보 중 하나를 선택: 보
+# 컴퓨터: 가위
+# 졌다.
+# 가위, 바위, 보 중 하나를 선택: 가위
+# 컴퓨터: 가위
+# 비겼다.
+# 가위, 바위, 보 중 하나를 선택: 바위
+# 컴퓨터: 가위
+# 이겼다.
+
+import random
+
+print("이길 때 까지 계속 합니다.")
+
+win = False
+
+while win != True :
+    ans = input("가위, 바위, 보 중 하나를 선택: ")
+    com = random.randint(1,3)
+    print("컴퓨터:", end = " ")
+
+    if com == 1 :
+        print("가위")
+        if ans == "가위" :
+            print("비겼다.")
+        elif ans == "바위" :
+            print("이겼다.")
+            win = True
+        else :
+            print("졌다.")
+      
+    if com == 2 :
+        print("바위")
+        if ans == "바위" :
+            print("비겼다.")
+        elif ans == "보" :
+            print("이겼다.")
+            win = True
+        else :
+            print("졌다.")
+
+    if com == 3 :
+        print("보")
+        if ans == "보" :
+            print("비겼다.")
+        elif ans == "가위" :
+            print("이겼다.")
+            win = True
+        else :
+            print("졌다.")
+'''
