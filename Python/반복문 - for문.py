@@ -346,7 +346,7 @@ for i in range(3):
 for i in range(10):
     for j in range(10):
         print("*", end ="")
- print()          # 다음 줄로 넘어감
+print()          # 다음 줄로 넘어감
 
 # 사각형 모양 출력하기
 for i in range(3):
