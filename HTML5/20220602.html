@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "ko">
+<head>
+    <meta charset = "utf-8" />
+    <title>CSS3 - 배경속성</title>
+    <style type = "text/css">
+        div {
+            width: 200px; height: 100px;
+            border: 5px solid black; margin-bottom: 20px;
+            background-image: url(cat.jpg);
+            background-size: 50px;
+        }
+        .box01 { background-repeat: repeat; }
+        .box02 { background-repeat: repeat-x; }
+        .box03 { background-repeat: repeat-y; }
+        .box04 { background-repeat: no-repeat; }
+    </style>
+</head>
+<body>
+    반복<div class = "box01"></div>
+    X축반복<div class = "box02"></div>
+    Y축반복<div class = "box03"></div>
+    반복하지않음<div class = "box04"></div>
+</body>
+</html>
