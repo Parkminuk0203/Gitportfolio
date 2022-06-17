@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>구조 선택자 주의 사항</title>
+    <title>아이디 선택자 사용</title>
     <style>
-        li:first-child > a { color: red;}
+        #header {
+            width: 800px; margin: 0 auto;
+            background: red;
+        }
+
+        #wrap {
+            width: 800px; margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #aside {
+            width: 200px; float: left;
+            background: blue;
+        }
+
+        #content {
+            width: 600px; float: right;
+            background: green;
+        }
     </style>
 </head>
 <body>
-    <ul>
-        <li><a href="#">주의 사항</a></li>
-        <li><a href="#">주의 사항</a></li>
-        <li><a href="#">주의 사항</a></li>
-        <li><a href="#">주의 사항</a></li>
-        <li><a href="#">주의 사항</a></li>
-    </ul>
+    <div id = "header">
+        <h1>#header 태그</h1>
+    </div>
+    <div id = "wrap">
+        <div id = "aside">
+            <h1>#aside 태그</h1>
+        </div>
+        <div id = "content">
+            <h1>#content 태그</h1>
+        </div>
+    </div>
+<body>
+
 </body>
 </html>
